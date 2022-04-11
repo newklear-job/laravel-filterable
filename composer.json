@@ -1,0 +1,15 @@
+{
+    "name": "newklear-job/filterable",
+    "autoload": {
+        "psr-4": {
+            "NewklearJob\\Filterable\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Vitalii",
+            "email": "petergerinv@gmail.com"
+        }
+    ],
+    "require": {}
+}

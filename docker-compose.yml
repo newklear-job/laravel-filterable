@@ -1,0 +1,23 @@
+version: '3.8'
+services:
+  back:
+    build:
+      args:
+        user: ${UNAME:-walemy}
+        uid: ${UID:-1000}
+        GITHUB_TOKEN: ${GITHUB_TOKEN}
+      context: .
+      dockerfile: docker/php.dockerfile
+    container_name: ${PROJECT_NAME}-back
+    restart: unless-stopped
+    working_dir: /var/www/project
+    volumes:
+      - ./docker/back/local.ini:/usr/local/etc/php/conf.d/local.ini
+      - ./docker/back/.bashrc:/home/${UNAME}/.bashrc
+      - ./:/var/www/project
+    networks:
+      - network
+
+networks:
+  network:
+    driver: bridge
