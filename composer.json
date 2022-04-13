@@ -1,15 +1,41 @@
 {
-    "name": "newklear-job/filterable",
-    "autoload": {
-        "psr-4": {
-            "NewklearJob\\Filterable\\": "src/"
-        }
-    },
-    "authors": [
-        {
-            "name": "Vitalii",
-            "email": "petergerinv@gmail.com"
-        }
-    ],
-    "require": {}
+  "name": "newklear-job/filterable",
+  "autoload": {
+    "psr-4": {
+      "Filterable\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests"
+    }
+  },
+  "authors": [
+    {
+      "name": "Vitalii",
+      "email": "petergerinv@gmail.com"
+    }
+  ],
+  "require": {
+    "php": "^8.1",
+    "laravel/framework": "^9.7"
+  },
+  "require-dev": {
+    "roave/security-advisories": "dev-latest",
+    "pestphp/pest": "^1.21",
+    "phpunit/phpunit": "^9.5",
+    "orchestra/testbench": "^7.4"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Filterable\\FilterableServiceProvider"
+      ]
+    }
+  },
+  "config": {
+    "allow-plugins": {
+      "pestphp/pest-plugin": true
+    }
+  }
 }

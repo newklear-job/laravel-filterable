@@ -1,2 +1,2 @@
-alias t='php artisan test'
-alias tf='php artisan test --filter'
+alias t='./vendor/bin/pest'
+alias tf='./vendor/bin/pest --filter'
