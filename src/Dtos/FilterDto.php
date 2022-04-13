@@ -43,22 +43,22 @@ final class FilterDto
 
     private static function orderByParam(): string
     {
-        return config('config.queryParam.orderBy', 'orderBy');
+        return config('filterable.queryParam.orderBy', 'orderBy');
     }
 
     private static function orderByDirectionParam(): string
     {
-        return config('config.queryParam.orderByDirection', 'orderByDirection');
+        return config('filterable.queryParam.orderByDirection', 'orderByDirection');
     }
 
     private static function pageParam(): string
     {
-        return config('config.queryParam.page', 'page');
+        return config('filterable.queryParam.page', 'page');
     }
 
     private static function perPageParam(): string
     {
-        return config('config.queryParam.perPage', 'perPage');
+        return config('filterable.queryParam.perPage', 'perPage');
     }
 
     public function getFilters(): array
